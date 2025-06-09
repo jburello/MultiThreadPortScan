@@ -1,23 +1,25 @@
 # MultiThreadPortScan
 
-A fast and efficient **multithreaded port scanner** built with Python. Designed to quickly identify open TCP ports on a target host using concurrent threading and socket programming.
+A simple, multithreaded TCP port scanner written in Python.  
+It efficiently scans a range of ports on a target IP address or hostname using concurrent threads to speed up the process.
 
 ---
 
 ## Features
 
-- Scans specified range of ports on a target IP address or domain.
-- Uses multithreading to speed up scanning and reduce total scan time.
-- Thread-safe handling of shared data for accurate results.
-- Configurable thread count for balancing speed and resource use.
-- Provides a clear list of open ports at the end of the scan.
-- Includes timeout handling for unresponsive ports.
+- Supports scanning user-defined port ranges (e.g., 1-1024)
+- Resolves hostnames to IP addresses automatically
+- Uses multithreading (default 100 threads) for faster scanning
+- Thread-safe collection and display of open ports
+- Validates user input for IP addresses and port ranges
+- Prints real-time results of open ports during scanning
+- Clean and user-friendly command-line interface
 
 ---
 
-## Technologies Used
+## Requirements
 
-- Python 3
-- `socket` library for TCP connection attempts
-- `threading` library for concurrent execution
-- `queue.Queue` for thread-safe task management
+- Python 3.x
+- No external dependencies (uses built-in `socket`, `threading`, `queue` modules)
+
+---
